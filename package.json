@@ -1,0 +1,16 @@
+{
+  "name": "nba-extension",
+  "version": "1.0.0",
+  "description": "Adds keyboard control to the NBA video player.",
+  "main": "init.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve"
+  },
+  "author": "Viktor Ohad",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^13.0.2",
+    "typescript": "^4.6.3"
+  }
+}

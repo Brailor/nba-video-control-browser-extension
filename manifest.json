@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "NBA video control",
+  "version": "1.0",
+  "description": "Adds the missing keyboard control to the NBA video player.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["init.js"]
+    }
+  ]
+
+}
+
