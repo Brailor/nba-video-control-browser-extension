@@ -89,6 +89,10 @@ window.addEventListener('keyup', (event) => {
 const tableContainer = document.querySelector(".nlControlsTable")
 const pauseBtn = tableContainer.querySelector('.nlPauseBtn')
 const playBtn = tableContainer.querySelector('.nlPlayBtn')
+const backLongBtn =tableContainer.querySelector('.nlFastBackBtn')
+const backShortBtn =tableContainer.querySelector('.nlBackTenBtn')
+const forwardLongBtn =tableContainer.querySelector('.nlFastForwardBtn')
+const forwardShortBtn =tableContainer.querySelector('.nlForwardTenBtn')
 
 const handlePause = () => {
     const ev = new Event('click')
@@ -101,9 +105,23 @@ const handlePlay = () => {
 }
 
 const handleLongJump = (direction) => {
+    const ev = new Event('click')
+    const btn = direction === 'forward' ? forwardLongBtn : backLongBtn
     console.log(`jumping ${direction} -- LONG`)
+    btn.dispatchEvent(ev)
 }
 
 const handleShortJump = (direction) => {
+    const ev = new Event('click')
+    const btn = direction === 'forward' ? forwardShortBtn : backShortBtn
     console.log(`jumping ${direction} -- SHORT`)
+    btn.dispatchEvent(ev)
+}
+
+const handleVolUp = () => {
+    console.log('inc volume')
+}
+
+const handleVolDown = () => {
+    console.log('desc volume')
 }
